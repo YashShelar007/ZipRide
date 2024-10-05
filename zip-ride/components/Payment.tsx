@@ -49,7 +49,7 @@ const Payment = ({
       merchantDisplayName: "ZipRide, Inc.",
       intentConfiguration: {
         mode: {
-          amount: parseInt(amount) * 100,
+          amount: parseFloat(amount) * 100,
           currencyCode: "usd",
         },
         confirmHandler: async (
@@ -127,7 +127,7 @@ const Payment = ({
     <>
       <CustomButton
         title="Confirm Ride"
-        className="my-10"
+        className="my-6"
         onPress={openPaymentSheet}
       />
 

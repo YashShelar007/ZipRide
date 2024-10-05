@@ -39,8 +39,7 @@ const RideLayout = ({
               {title || "Go Back"}
             </Text>
           </View>
-
-          <Map />
+          <View className="mt-7"><Map /></View>
         </View>
 
         <BottomSheet
