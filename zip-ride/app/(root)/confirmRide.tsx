@@ -10,7 +10,7 @@ const ConfirmRide = () => {
   const { drivers, selectedDriver, setSelectedDriver } = useDriverStore();
 
   return (
-    <RideLayout title={"Choose a Rider"} snapPoints={["65%", "85%"]}>
+    <RideLayout title={"Choose a Rider"} snapPoints={["70%", "85%"]}>
       <FlatList
         data={drivers}
         keyExtractor={(item, index) => index.toString()}
