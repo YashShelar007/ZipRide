@@ -2,13 +2,10 @@ import { neon } from "@neondatabase/serverless";
 
 export async function GET(request: Request, { id }: { id: string }) {
   if (!id)
-    return new Response(
-      JSON.stringify({
-        error: "Missing required fields",
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      })
-    );
+    return new Response(JSON.stringify({ error: "Missing required fields" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
 
   try {
     const sql = neon(`${process.env.DATABASE_URL}`);
@@ -44,21 +41,15 @@ export async function GET(request: Request, { id }: { id: string }) {
             rides.created_at DESC;
     `;
 
-    return new Response(
-      JSON.stringify({
-        data: response,
-        status: 201,
-        headers: { "Content-Type": "application/json" },
-      })
-    );
+    return new Response(JSON.stringify({ data: response }), {
+      status: 201,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
     console.error("Error fetching recent rides:", error);
-    return new Response(
-      JSON.stringify({
-        error: "Internal Server Error",
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      })
-    );
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }

@@ -31,11 +31,8 @@ export async function POST(request: Request) {
       !user_id
     ) {
       return new Response(
-        JSON.stringify({
-          error: "Missing required fields",
-          status: 400,
-          headers: { "Content-Type": "application/json" },
-        })
+        JSON.stringify({ error: "Missing required fields" }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
 
@@ -70,21 +67,15 @@ export async function POST(request: Request) {
       RETURNING *;
     `;
 
-    return new Response(
-      JSON.stringify({
-        data: response,
-        status: 201,
-        headers: { "Content-Type": "application/json" },
-      })
-    );
+    return new Response(JSON.stringify({ data: response }), {
+      status: 201,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
     console.error("Error inserting data into recent_rides:", error);
-    return new Response(
-      JSON.stringify({
-        error: "Internal Server Error",
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      })
-    );
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }
