@@ -47,9 +47,9 @@ ZipRide streamlines ride-sharing by integrating real-time booking, navigation, a
 
 ---
 
-## 📽️ Demo
+## 📽️ Screenshots
 
-- 📸 Screenshots: [Splash Screen](zip-ride/assets/images/splash.png)
+<img src="zip-ride/assets/images/splash.png" alt="App Icon" width="200"/>
 
 ---
 
