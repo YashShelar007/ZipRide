@@ -82,6 +82,3 @@ npx expo start
 **Yash Shelar**  
 Portfolio: [yashshelar.com](https://yashshelar.com)  
 LinkedIn: [linkedin.com/in/shelar-yash](https://linkedin.com/in/shelar-yash)  
-```
-
----
