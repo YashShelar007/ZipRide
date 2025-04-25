@@ -1,37 +1,87 @@
 # 🚗 ZipRide – Full-Stack Ride-Sharing App
 
-### 🌐 Live Demo: Coming Soon
-### 🔗 GitHub: https://github.com/YashShelar007/ZipRide
+A scalable, real-time ride-booking mobile app with secure Stripe payments, OAuth login, and optimized for 10K+ concurrent users.
+
+### 🌐 Live Demo: Coming Soon 
+### 📂 GitHub: https://github.com/YashShelar007/ZipRide
 
 ---
 
-## 📍 Problem
-A scalable mobile ride-sharing solution with secure payments, OAuth login, and real-time navigation — built for performance and user trust.
+## 📍 Problem It Solves
 
-## 🛠️ Stack
-- React Native, Expo
-- Stripe (Payments), Clerk (Auth)
-- Zustand (State)
-- NeonDB (PostgreSQL)
-- Load-tested to 10K+ concurrent users
+ZipRide streamlines ride-sharing by integrating real-time booking, navigation, and payments into a single mobile-first experience, built for high concurrency and secure transactions.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: React Native, Expo, TypeScript, Tailwind CSS
+- **Backend**: Neon PostgreSQL, Zustand (State)
+- **Auth**: Clerk (OAuth with Google, Apple)
+- **Payments**: Stripe Webhooks
+- **Tooling**: NativeWind, Sentry, GitHub Actions
+
+---
 
 ## ✨ Key Features
-- Real-time ride booking + route tracking
-- Secure Stripe-based payments with webhook support
-- OAuth login with Google/Apple via Clerk
-- Responsive mobile-first UX via Expo + React Native Maps
 
-## 📊 Performance Highlights
-- 10,000+ concurrent sessions during load testing
-- 99.9% successful payment flow execution
-- State management latency reduced with Zustand
-
-## 📽️ Demo
-[Link to Loom video or screenshot]
+- 🚘 Real-time ride booking & location-based matching
+- 🔒 Secure payment handling via Stripe
+- 🪪 OAuth login via Clerk (multi-provider)
+- ⚡ Zustand state management for performance
+- 📈 Load-tested to 10,000+ concurrent sessions
 
 ---
 
-## 🧩 Future Work
-- Push notifications
-- Driver-side app version
-- In-app reviews and ratings
+## 🧱 Architecture
+
+```
+[Client (React Native/Expo)]
+        ↓
+[State Mgmt (Zustand)]
+        ↓
+[APIs (Stripe Webhooks, Clerk Auth)]
+        ↓
+[NeonDB PostgreSQL]
+```
+
+---
+
+## 📽️ Demo
+
+- 📸 Screenshots: [Splash Screen](zip-ride/assets/images/splash.png)
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/YashShelar007/ZipRide.git
+cd ZipRide
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npx expo start
+```
+
+---
+
+## 🧩 Future Enhancements
+
+- 📲 Push Notifications (Expo Push)
+- 🧭 Driver-side interface
+- ⭐ Rating & Feedback System
+
+---
+
+## 👨‍💻 Author
+
+**Yash Shelar**  
+Portfolio: [yashshelar.com](https://yashshelar.com)  
+LinkedIn: [linkedin.com/in/shelar-yash](https://linkedin.com/in/shelar-yash)  
+```
+
+---
